@@ -1,4 +1,5 @@
 let imagesLink=[
+    "https://is3-ssl.mzstatic.com/image/thumb/NcMcLMcSxa5Ho_oOXvUbGg/738x416.webp",
     "https://is2-ssl.mzstatic.com/image/thumb/Features122/v4/e0/c7/0d/e0c70d56-1c09-1c01-8afb-e98b63189d0a/218c885d-e5db-4e69-ac5c-e70586195e87.lsr/1478x832fe.webp",
     "https://is4-ssl.mzstatic.com/image/thumb/Features122/v4/c3/ad/bc/c3adbcdf-bb52-05f0-5ed5-afbdf3c051fa/693e0778-814e-402d-bd89-a87148bca7bc.lsr/1478x832fe.webp",
     "https://is3-ssl.mzstatic.com/image/thumb/Features122/v4/cd/43/ed/cd43eda7-4c86-bb98-557d-7fcbf9b9e1c9/5172956a-6ebb-4ea7-bbc8-feb972bde53b.lsr/1478x832fe.webp",
@@ -33,6 +34,7 @@ leftBtn.addEventListener("click",function(){
 })
 
 let imagesLink2=[
+    "https://is2-ssl.mzstatic.com/image/thumb/d9YbWy1AerS9BZSiyoQ0Lw/1478x832.webp",
     "https://is3-ssl.mzstatic.com/image/thumb/AWDRdQz0nepFpnsUNiTDuw/738x416.webp",
     "https://is3-ssl.mzstatic.com/image/thumb/neRAWaMZZ5xVz4fnbFXJUA/738x416.webp",
     "https://is4-ssl.mzstatic.com/image/thumb/XiXPs1AKOFQE7cq7AVlJeQ/738x416.webp",
@@ -81,6 +83,7 @@ leftBtn2.addEventListener("click",function(){
 
 
 let imagesLink3=[
+    "https://is1-ssl.mzstatic.com/image/thumb/QiFf4rD5DY65HbtJUOjE7Q/738x416.webp",
     "https://is3-ssl.mzstatic.com/image/thumb/AWDRdQz0nepFpnsUNiTDuw/738x416.webp",
     "https://is3-ssl.mzstatic.com/image/thumb/neRAWaMZZ5xVz4fnbFXJUA/738x416.webp",
     "https://is4-ssl.mzstatic.com/image/thumb/XiXPs1AKOFQE7cq7AVlJeQ/738x416.webp",
@@ -320,3 +323,21 @@ leftBtn7.addEventListener("click",function(){
     }
     crauser7.src=imagesLink7[imageState7];
 })
+var faq = document.getElementsByClassName("faq-page");
+var i;
+
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
