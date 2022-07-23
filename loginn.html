@@ -1,0 +1,291 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    padding:0px ;
+    margin: 0px;
+}
+body{
+    background-color:#044a75; ;
+}
+#logo {
+   
+    padding-top: 10px;
+    width: 21%;
+    height: 60px;
+    margin-top: 50px;
+    margin: auto;
+    margin-bottom: 30px;
+    
+    
+   
+}
+ h2{
+    color: white;
+    margin: 10px;
+
+    font-size: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+.logo_img img{
+    max-width: 100%;  
+    width: 40px;  
+    
+}
+#content-box{
+    width: 1200px;
+    margin: auto;
+    
+    
+}
+   #reg-form{
+       width: 480px;
+       margin: auto;
+       background: #fff;
+
+       border-radius: 5px;
+       
+       
+   }    
+   h1{
+       color: #091e3f;
+       text-align: center;
+       font-family: Publico;
+       margin-top: 30px;
+       
+   }
+   .lab{
+       font-size: 15px;
+       color: #3c4858;
+      font-weight: bold;
+       font-family: 'Open Sans', sans-serif;
+       line-height: 30px;
+       margin-left: 70px;
+   }
+ .inpt{
+     width: 300px;
+     margin-left: 70px;
+     padding: 10px;
+     border: 1px solid rgb(156, 156, 156);
+     border-radius: 3px;    
+ }   
+ .btn{
+     background-color: blue;
+     padding: 8px;
+    color: #fff;
+    background: #0092ff;
+    border: 1px #0092ff;
+    width: 322px;
+    margin-left: 70px;
+    font-size: 18px;
+    border-radius: 2px;
+ }
+ .btn:hover{
+     background-color: blue;
+ }
+ .line_1{
+    
+     width: 140px;
+     height: 1px;
+     background: rgb(212, 211, 200);
+     margin: 10px;
+     margin-left: 70px;
+     float: left;
+ }
+ .line_2{
+    
+    width: 140px;
+    height: 1px;
+    background: rgb(212, 211, 200);
+    margin: 10px;
+    
+    float: left;
+}
+ .line_1 + p{
+    float: left;
+    margin-top: -4px;
+    color: #1f2d3d;
+ }
+ #google-sign{
+     width:300px;
+     height: 20px;
+     border:1px solid #4285f4;
+     margin-left: 70px;
+     padding: 10px;
+     
+ }
+ #apple-sign{
+    width:300px;
+    height: 20px;
+    border:1px solid #4285f4;
+    margin-left: 70px;
+    padding: 10px;
+    
+}
+ #clc{
+     clear: both;
+ }
+ #apple-sign img{
+    max-width: 100%;
+    width: 25px;
+    margin-left: 50px;
+ }
+ #google-sign img{
+       max-width: 100%;
+       width: 25px;
+       margin-left: 50px;
+
+ }
+
+ #apple-sign p{
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-size: 17px;
+    color:#1f2d3d;
+    font-family: Roboto,sans-serif;
+ }
+ #google-sign   p{
+     text-align: center;
+     margin-top: -30px;
+     margin-bottom: 10px;
+     margin-left: 30px;
+     font-size: 17px;
+     color:#1f2d3d;
+     font-family: Roboto,sans-serif;
+     
+ }
+ .last{
+     font-size: 20px;
+     margin-top: 10px;
+     text-align: center;
+     color: lavender;
+ }
+ .last:hover{
+     color: rgb(179, 179, 221);
+ }
+ .inpt-img{
+    margin-bottom: -8px;
+    width: 23px;
+    margin-left: -40px;
+  
+    
+
+ }
+</style>
+</head>
+<body>
+    <div id="logo">
+        <img  onclick="(location.href='index.html')" id="logo-img" src="">
+    </div>
+    <div id="content-box">
+      <div id="reg-form">
+        <br />
+        <h1>Log In</h1>
+
+        <br />
+        <form>
+          <label class="lab" for="email">Email address</label>
+          <div>
+            <input class="inpt"
+              type="email"
+              required="required"
+              autocomplete="username"
+            />
+          </div>
+
+          <br />
+          <label class="lab" for="email">Password</label>
+          <div>
+            <input class="inpt" type="password"
+              required="required"
+              autocomplete="current-password"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFF-cpER_F9bw0DYBVqRqb7ttsMd3yXmkEMw&usqp=CAU"
+              class="inpt-img"
+            />
+          </div>
+          <br />
+
+          <button class="btn" onclick="(location.href='index.html')">
+            Log in
+          </button>
+        </form>
+
+        <br />
+
+        <div class="line_1"></div>
+        <p>OR</p>
+        <div class="line_2"></div>
+        <div id="clc"></div>
+
+        <br />
+        <div id="google-sign">
+          <div>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.DdVPhTob_7Dpl5-BRiaK8wHaHa&pid=Api&P=0" />
+            
+          </div>
+          <p>Sign in with Google</p>
+        </div>
+        <br>
+        <div id="apple-sign">
+        <div>
+          <img src="https://pngmind.com/wp-content/uploads/2019/08/Apple-Logo-Png-Transparent-Background-1.png" />
+          
+        </div>
+        <p>Sign in with Apple </p>
+        </div>
+        <br />
+        <br />
+      </div>
+      <p class="last">Create an account . I forgot my password <button  id="btn" onclick="(location.href='SignUpPage.html')">reset</button></p>
+      <br />
+      <br />
+    </div>
+  </body>
+</html>
+<script>
+  let form = document.querySelector("form");
+  let signinls=JSON.parse(localStorage.getItem("signin"))||[];
+  let signupls=JSON.parse(localStorage.getItem("signup"))||[];
+  form.addEventListener("submit",function(e){
+      e.preventDefault();
+      if(signupls.length==0){
+          alert("No User till Now");
+          return;
+      }
+      let obj={
+          Email:form.email.value,
+          Password:form.password.value,
+      }
+     if(obj.Email==""){
+          alert("Filed Empty")
+          return
+      }
+      else if(obj.Password==""){
+          alert("Filed Empty")
+          return
+      }
+      let flag=false;
+      signupls.forEach(function(el){
+          if(el.Email==obj.Email && el.Password==obj.Password){
+              localStorage.setItem("signin",JSON.stringify(el));
+              flag==true;
+              alert("succefully login")
+              window.location.href="index.html"
+          }else if(flag==false){
+              alert("user doesn't exist");
+          }           
+          
+      })
+      
+    
+  })
+</script>
