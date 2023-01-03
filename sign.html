@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #050703;
+}
+#navbar{
+    height: 50px;
+    width:100%;
+    background-color: black;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+#navbar>div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    align-items: center;
+}
+#navbar>div>input{
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    height: 25px;
+}
+#navbar>div>a{
+    background-color: #007aff;
+    padding: 6px 8px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+#navbar img{
+    cursor: pointer;
+}
+#main>img{
+    width: 100%;
+}
+#main>h1{
+    color: white;
+    background-color: #050703;
+    text-align: center;
+}
+#sign{ 
+    background-color: white;
+    width: 50%;
+    height: 550px;
+    border-radius: 25px;
+    position:fixed; 
+    top: 50px;
+    left: 350px;
+}
+#sign>a>i{
+    margin-left: 30px;
+    font-size: 50px;
+    color: #cccccc;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#sign>a~i{
+    margin-left: 50%;
+    font-size: 90px;
+    color: #888888;
+}
+#sign>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center  ;
+}
+#sign>p{
+    text-align: center;
+    color: #7e7e7f;
+    font-size: 15px;
+}
+#sign>form>input{
+    padding: 14px;
+    margin: auto;
+    margin-left: 33%;
+    margin-bottom: 100px;
+}
+#sign>form~a>p{
+    color: #007aff;
+    text-align: center;
+}
+#sign>form>button{
+    border: none;
+    margin-left: -72px;
+}
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">
+            <img src="./images/Capture.PNG" alt="" />
+        </a>
+        <div>
+          <input type="text" placeholder="Search" />
+          <a>Sign In</a>
+        </div>
+      </div>
+      <div id="main">
+        <img src="./images/Capture1.PNG" alt="">
+        <h1>
+            Exclusively on Apple TV+. Watch here and on the Apple TV app across
+            your devices.
+        </h1>
+      </div>
+      <div id="sign">
+        <a href="index.html">
+            <i class="fa-solid fa-xmark"></i><br>
+        </a>
+        <i class="fa-brands fa-apple"></i>
+        <h2>Sign in with your Apple ID</h2>
+        <p>You will be signed in to Apple TV and Apple Music.</p>
+        <form>
+            <input id="ID" type="text" placeholder="Apple ID">
+            <button>Continue</button>
+        </form>
+        <a href="create.html"><p>Create NEW Apple ID ></p></a>
+        <a href=""><p>Forgot Apple ID or Forgot?</p></a>
+      </div>
+</body>
+</html>
+
+<script
+  src="https://kit.fontawesome.com/24c494a6b6.js"
+  crossorigin="anonymous"
+></script>
+<script>
+    document.querySelector("form").addEventListener("submit",add)
+    function add(event){
+        y=JSON.parse(localStorage.getItem("ids")) || []
+        event.preventDefault()
+        z=document.querySelector("#ID").value
+        if(z!=""){
+            isexist=false
+            y.forEach(element => {
+                if(element==z){
+                    isexist=true
+                }
+            });
+            if(isexist){
+                alert("Login Successful")
+            }else{
+                alert("No Such Apple ID exist.")
+            }
+        }else{
+            alert("Enter ID.")
+        }
+    }
+</script>

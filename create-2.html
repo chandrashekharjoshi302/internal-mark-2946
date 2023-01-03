@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #050703;
+}
+#navbar{
+    height: 50px;
+    width:100%;
+    background-color: black;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+#navbar>div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    align-items: center;
+}
+#navbar>div>input{
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    height: 25px;
+}
+#navbar>div>a{
+    background-color: #007aff;
+    padding: 6px 8px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+#main>img{
+    width: 100%;
+}
+#main>h1{
+    color: white;
+    background-color: #050703;
+    text-align: center;
+}
+#sign{ 
+    background-color: white;
+    width: 50%;
+    height: 550px;
+    border-radius: 25px;
+    position:fixed; 
+    top: 50px;
+    left: 350px;
+}
+#sign>a>i{
+    margin-left: 30px;
+    font-size: 50px;
+    color: #cccccc;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#sign>img{
+    margin-left: 40%;
+    border-radius: 28%;
+}
+#sign>h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sign>p{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+#sign>a>button{
+    margin-top: 20px;
+    margin-left: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    background-color: #007aff;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+#sign>form{
+    width: 90%;
+    margin: auto;
+}
+#sign>form>input{
+    width: 90%;
+    height: 40px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
+#sign>form>p{
+    margin-bottom: -15px;
+}
+#sign>form>button{
+    margin-top: 20px;
+    margin-left: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    background-color: #007aff;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <img src="./images/Capture.PNG" alt="" />
+        <div>
+          <input type="text" placeholder="Search" />
+          <a>Sign In</a>
+        </div>
+      </div>
+      <div id="main">
+        <img src="./images/Capture1.PNG" alt="">
+        <h1>
+            Exclusively on Apple TV+. Watch here and on the Apple TV app across
+            your devices.
+        </h1>
+      </div>
+      <div id="sign">
+        <a href="index.html">
+            <i class="fa-solid fa-xmark"></i><br>
+        </a>
+        <h1>Create Apple ID</h1>
+        <form>
+            <input id="first"type="text" placeholder="First Name">
+        <input  id="last"type="text" placeholder="Last Name">
+        <p>Date of birth</p>
+        <input id="date"type="date">
+        <input id="new"type="text" placeholder="New ID">
+        <button>Continue</button>
+        </form>
+      </div>
+</body>
+</html>
+
+<script
+  src="https://kit.fontawesome.com/24c494a6b6.js"
+  crossorigin="anonymous"
+></script>
+<script>
+    document.querySelector("form").addEventListener("submit",all)
+    isthere=true
+    function all(event){
+        event.preventDefault()
+        name=document.querySelector("#first").value
+        last=document.querySelector("#last").value
+        date=document.querySelector("#date").value
+        now=document.querySelector("#new").value
+        if(name!="" && last!="" && date!="" && now!=""){
+            y=JSON.parse(localStorage.getItem("ids")) || []
+            if(y.length==0){
+                y.push(now)
+                localStorage.setItem("ids",JSON.stringify(y))
+                console.log(y)
+            }else{
+                y.forEach(element => {
+                if(element==now){
+                    alert("Apple ID exist.")
+                }else{
+                    isthere=false
+                }
+            });
+            if(!isthere){
+                y.push(now)
+                localStorage.setItem("ids",JSON.stringify(y))
+            }
+        }            
+        }else{
+            alert("Fill all credentials.")
+        }
+    }
+</script>
